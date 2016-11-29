@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        body{
+            background-image: url(robot.png);;
+        }
+        #container{
+            width: 99%;
+            height: 99%
+        }
+        #heading{
+            color: crimson;
+            float: right;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="heading">
+        <h1>Guess what number I'm thinking of!</h1>
+        <div id="guess">
+            <input type="button" value="Make a Guess" onclick="guess()">
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function guess() {
+        var ask = prompt("What's your guess?", "");
+        var answer = 4;
+
+        if(ask < answer){
+            alert("Nope, it's higher than " + ask)
+        }
+        if(ask > answer){
+            alert("Nope, it's lower than " + ask)
+        }
+        if(ask == answer){
+            alert("You got it! The number I was thinking of was " + answer)
+        }
+    }
+</script>
+</body>
+</html>
